@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Storage for MediBridge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #00d4aa;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #00b390;
+        }
+        .note {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Clear Session Storage</h1>
+        <p>Click the button below to clear session storage and view the intro animation again.</p>
+        
+        <button onclick="clearStorage()">Clear Session Storage</button>
+        <br><br>
+        <a href="http://localhost:3003" target="_blank"><button>Open MediBridge App</button></a>
+        
+        <div class="note">
+            <strong>Note:</strong> After clearing storage, refresh the app page to see the intro animation again.
+        </div>
+    </div>
+
+    <script>
+        function clearStorage() {
+            sessionStorage.clear();
+            alert('Session storage cleared! Please refresh the app to see the intro animation.');
+        }
+    </script>
+</body>
+</html>
